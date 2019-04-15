@@ -12,8 +12,15 @@ int main(){
 	printf("Enter an alphabet substitution by typing 26 consecutive letters, where the first will replace A, the second will replace B and so on");//prompt the user to imput an alphabet substitution
 	scanf(" %[^\n]s", substitution);//store the rotation value in the variable "rotationkey"
     
-    for(i=0, i<26, i++){
-        
+    //turn lowercase into uppercase
+    if(substitution[i] >= 'a' && substitution[i] <= 'z'){
+		substitution[i] = substitution[i] - 32;
+	}
+
+			
+    for(i=0; i<26; i++){
+        substitution[i] = substitution[i] - i;
+        text[i] = 
     }
     return 0;
 }
